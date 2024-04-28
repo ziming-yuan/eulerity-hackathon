@@ -7,12 +7,12 @@ interface ImageCardProps {
   pet: Pet;
 }
 
-const Card = styled.div<{ isSelected: boolean }>`
+const Card = styled.div<{ $isSelected: boolean }>`
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: ${(props) => props.theme.borderRadius};
-  outline: ${({ isSelected, theme }) =>
-    isSelected && `2px solid ${theme.colors.primary}`};
+  outline: ${({ $isSelected, theme }) =>
+    $isSelected && `2px solid ${theme.colors.primary}`};
   border: "1px solid #d9d9d9";
   transition: transform 0.2s ease-out; /* When hovering over the card, scale it */
   &:hover {
@@ -84,7 +84,7 @@ const ImageCard = ({ pet }: ImageCardProps) => {
   const isSelected = selectedPets.has(pet.id);
 
   return (
-    <Card isSelected={isSelected} onClick={() => toggleSelection(pet.id)}>
+    <Card $isSelected={isSelected} onClick={() => toggleSelection(pet.id)}>
       <PositionRelative>
         <Image src={pet.url} alt={pet.title} />
         <DescriptionOverlay>{pet.description}</DescriptionOverlay>
