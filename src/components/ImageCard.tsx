@@ -10,7 +10,7 @@ const Card = styled.div`
     width: 300px;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+    border-radius: ${props => props.theme.borderRadius};
     border: 1px solid #d9d9d9;
     /* When hovering over the card, scale it */
     transition: transform 0.2s ease-out;
@@ -27,7 +27,7 @@ const Image = styled.img`
     width: 100%;
     height: 300px;
     object-fit: cover; /* Scale the image to cover the entire area, maintaining the ratio */
-    border-radius: 4px 4px 0 0;
+    border-radius: ${props => props.theme.borderRadius} ${props => props.theme.borderRadius} 0 0;
     /* Small screens */
     @media (max-width: 576px) {
         height: 200px;
@@ -38,10 +38,12 @@ const Info = styled.div`
     padding: 10px;
     background: white;
     text-align: center;
+    border-radius: 0 0 ${props => props.theme.borderRadius} ${props => props.theme.borderRadius};
 `;
 
 // Overlay of pet description appears when hovering over the image
 const DescriptionOverlay = styled.div`
+    border-radius: ${props => props.theme.borderRadius} ${props => props.theme.borderRadius} 0 0;
     position: absolute;
     top: 0;
     left: 0;

@@ -6,7 +6,7 @@ import ImageGrid from './components/ImageGrid';
 
 const GlobalStyles = createGlobalStyle`
   button, input, select {
-    border-radius: 4px;
+    border-radius: ${(props) => props.theme.borderRadius};
     border: 1px solid #d9d9d9;
     padding: 8px;
   }
@@ -16,9 +16,13 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+const theme = {
+  borderRadius: '4px',
+}
+
 function App() {
   return (
-    <ThemeProvider theme = {{}}>
+    <ThemeProvider theme = {theme}>
       <PetProvider>
         <GlobalStyles />
         <SearchBar />
