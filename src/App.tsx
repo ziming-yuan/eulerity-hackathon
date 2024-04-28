@@ -1,6 +1,7 @@
 import React from 'react';
-import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
+import {ThemeProvider, createGlobalStyle} from 'styled-components';
 import SearchBar from './components/SearchBar';
+import ImageGrid from './components/ImageGrid';
 
 const GlobalStyles = createGlobalStyle`
   button, input, select {
@@ -19,6 +20,7 @@ function App() {
     <ThemeProvider theme = {{}}>
       <GlobalStyles />
       <SearchBar />
+      <ImageGrid />
     </ThemeProvider>
   );
 }

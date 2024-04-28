@@ -11,12 +11,12 @@ const SearchContainer = styled.div`
 
 const StyledInput = styled.input`
   width: 100%;
-  padding-right: 30px; /* Space for the icon */
+  padding-left: 32px; /* Space for the icon */
 `;
 
 const IconWrapper = styled.div`
   position: absolute;
-  right: 10px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   svg {
