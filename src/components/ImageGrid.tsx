@@ -1,5 +1,5 @@
 import React from 'react';
-import usePetData from '../hooks/usePetData'
+import { usePets } from '../hooks/PetContext';
 import ImageCard from './ImageCard';
 import styled from 'styled-components';
 
@@ -10,7 +10,7 @@ const StyledImageGrid = styled.div`
 `
 
 const ImageGrid = () => {
-    const { pets, loading, error } = usePetData();
+    const { pets, loading, error } = usePets();
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error loading images: {String(error)}</p>;

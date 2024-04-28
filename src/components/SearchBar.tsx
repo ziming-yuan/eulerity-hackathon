@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ReactComponent as SearchIcon } from '../icons/search.svg';
+import { usePets } from '../hooks/PetContext';
 
 const SearchContainer = styled.div`
   position: relative;
@@ -26,9 +27,13 @@ const IconWrapper = styled.div`
 `;
 
 const SearchBar = () => {
+  const { setSearch } = usePets();
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
   return (
     <SearchContainer>
-      <StyledInput type="text" placeholder="Search" />
+      <StyledInput type="text" placeholder="Search" onChange={handleSearchChange}/>
       <IconWrapper>
         <SearchIcon />
       </IconWrapper>

@@ -1,5 +1,6 @@
 import React from 'react';
-import {ThemeProvider, createGlobalStyle} from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { PetProvider } from './hooks/PetContext';
 import SearchBar from './components/SearchBar';
 import ImageGrid from './components/ImageGrid';
 
@@ -18,9 +19,11 @@ const GlobalStyles = createGlobalStyle`
 function App() {
   return (
     <ThemeProvider theme = {{}}>
-      <GlobalStyles />
-      <SearchBar />
-      <ImageGrid />
+      <PetProvider>
+        <GlobalStyles />
+        <SearchBar />
+        <ImageGrid />
+      </PetProvider>
     </ThemeProvider>
   );
 }
