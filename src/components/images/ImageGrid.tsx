@@ -9,11 +9,18 @@ const StyledImageGrid = styled.div`
   justify-content: center;
 `;
 
+const StyledParagraph = styled.p`
+  padding: 40px;
+  font-size: 20px;
+`;
 const ImageGrid = () => {
   const { pets, loading, error } = usePets();
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error loading images: {String(error)}</p>;
+  if (loading) return <StyledParagraph>Loading...</StyledParagraph>;
+  if (error)
+    return (
+      <StyledParagraph>Error loading images: {String(error)}</StyledParagraph>
+    );
 
   return (
     <StyledImageGrid>

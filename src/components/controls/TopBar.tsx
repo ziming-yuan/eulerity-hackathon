@@ -7,7 +7,7 @@ const TopBarContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10px;
-  /* Adjust the styling as necessary */
+  margin-top: 20px;
 `;
 
 const TopBar = () => {

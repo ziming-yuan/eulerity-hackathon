@@ -3,6 +3,7 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { PetProvider } from "./hooks/PetContext";
 import TopBar from "./components/controls/TopBar";
 import ImageGrid from "./components/images/ImageGrid";
+import TitleSection from "./components/TitleSection";
 
 const GlobalStyles = createGlobalStyle`
   button, input, select {
@@ -48,6 +49,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <PetProvider>
         <GlobalStyles />
+        <TitleSection />
         <TopBar />
         <ImageGrid />
       </PetProvider>
