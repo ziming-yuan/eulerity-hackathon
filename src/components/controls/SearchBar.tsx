@@ -8,6 +8,10 @@ const SearchContainer = styled.div`
   width: 20%;
   display: flex;
   align-items: center;
+  @media (max-width: 576px) {
+    width: 100%;
+    max-width: 382px;
+  }
 `;
 
 const StyledInput = styled.input`

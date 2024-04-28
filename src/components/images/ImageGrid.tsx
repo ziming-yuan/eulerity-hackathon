@@ -4,9 +4,22 @@ import ImageCard from "./ImageCard";
 import styled from "styled-components";
 
 const StyledImageGrid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  margin: 20px 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
+  gap: 20px;
+  &::after {
+    content: "";
+    width: 300px;
+    height: 0;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    &::after {
+      width: 200px;
+    }
+  }
 `;
 
 const StyledParagraph = styled.p`

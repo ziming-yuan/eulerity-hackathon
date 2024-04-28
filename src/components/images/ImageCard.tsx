@@ -9,7 +9,6 @@ interface ImageCardProps {
 
 const Card = styled.div<{ isSelected: boolean }>`
   width: 300px;
-  margin: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: ${(props) => props.theme.borderRadius};
   outline: ${({ isSelected, theme }) =>
