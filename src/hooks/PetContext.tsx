@@ -93,8 +93,25 @@ export const PetProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const downloadSelected = () => {
-    // Mock implementation
-    console.log(Array.from(selectedPets));
+    selectedPets.forEach((petId) => {
+      const pet = pets.find((p) => p.id === petId);
+      if (pet) {
+        fetch(pet.url)
+          .then((response) => response.blob())
+          .then((blob) => {
+            // Create a link element, use it to download the blob, and then remove it
+            const link = document.createElement("a");
+            link.href = window.URL.createObjectURL(blob);
+            link.download = `${pet.title}.jpg`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          })
+          .catch(() => {
+            console.error("Could not download the image:", pet.title);
+          });
+      }
+    });
   };
 
   const sortPets = (order: "asc" | "desc") => {
