@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { ReactComponent as SearchIcon } from '../icons/search.svg';
-import { usePets } from '../hooks/PetContext';
+import React from "react";
+import styled from "styled-components";
+import { ReactComponent as SearchIcon } from "../icons/search.svg";
+import { usePets } from "../hooks/PetContext";
 
 const SearchContainer = styled.div`
   position: relative;
-  width: 40%;
+  width: 20%;
   display: flex;
   align-items: center;
 `;
@@ -33,7 +33,11 @@ const SearchBar = () => {
   };
   return (
     <SearchContainer>
-      <StyledInput type="text" placeholder="Search" onChange={handleSearchChange}/>
+      <StyledInput
+        type="text"
+        placeholder="Search"
+        onChange={handleSearchChange}
+      />
       <IconWrapper>
         <SearchIcon />
       </IconWrapper>
