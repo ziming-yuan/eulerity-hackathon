@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Pet } from '../types/pets';
+import { Pet } from '../types/pet';
 
 interface ImageCardProps {
     pet: Pet;
