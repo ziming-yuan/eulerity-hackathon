@@ -10,7 +10,7 @@ const SearchContainer = styled.div`
   align-items: center;
   @media (max-width: 576px) {
     width: 100%;
-    max-width: 382px;
+    max-width: 393px;
   }
 `;
 

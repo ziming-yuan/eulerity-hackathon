@@ -9,11 +9,12 @@ const TitleSectionContainer = styled.div`
   background-position: center;
   color: white;
   text-align: left;
-  padding: 20px;
-  padding-left: 50px;
+  padding: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 400px;
+  font-size: 20px;
   /* Small screens */
   @media (max-width: 768px) {
     height: 300px;
