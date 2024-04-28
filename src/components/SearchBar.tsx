@@ -11,15 +11,7 @@ const SearchContainer = styled.div`
 
 const StyledInput = styled.input`
   width: 100%;
-  padding: 8px;
-  padding-right: 30px; /* Make room for the icon */
-  border-radius: 4px;
-  border: 1px solid #d9d9d9;
-  outline: none;
-  &:focus {
-    border-color: #4096ff;
-    border-width: 2px;
-  }
+  padding-right: 30px; /* Space for the icon */
 `;
 
 const IconWrapper = styled.div`
