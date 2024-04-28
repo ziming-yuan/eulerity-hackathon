@@ -13,6 +13,7 @@ type PetContextType = {
   selectAll: () => void;
   clearSelection: () => void;
   downloadSelected: () => void;
+  sortPets: (order: "asc" | "desc") => void;
 };
 
 const PetContext = createContext<PetContextType>({
@@ -26,6 +27,7 @@ const PetContext = createContext<PetContextType>({
   selectAll: () => {},
   clearSelection: () => {},
   downloadSelected: () => {},
+  sortPets: () => {},
 });
 
 export const PetProvider = ({ children }: { children: React.ReactNode }) => {
@@ -82,7 +84,7 @@ export const PetProvider = ({ children }: { children: React.ReactNode }) => {
 
   const selectAll = () => {
     const allIds = new Set<string>();
-    pets.forEach((pet) => allIds.add(pet.id));
+    filteredPets.forEach((pet) => allIds.add(pet.id));
     setSelectedPets(allIds);
   };
 
@@ -93,6 +95,17 @@ export const PetProvider = ({ children }: { children: React.ReactNode }) => {
   const downloadSelected = () => {
     // Mock implementation
     console.log(Array.from(selectedPets));
+  };
+
+  const sortPets = (order: "asc" | "desc") => {
+    const sortedPets = [...filteredPets].sort((a, b) => {
+      if (order === "asc") {
+        return a.title.localeCompare(b.title);
+      } else {
+        return b.title.localeCompare(a.title);
+      }
+    });
+    setFilteredPets(sortedPets);
   };
 
   const value = {
@@ -106,6 +119,7 @@ export const PetProvider = ({ children }: { children: React.ReactNode }) => {
     selectAll,
     clearSelection,
     downloadSelected,
+    sortPets,
   };
 
   return <PetContext.Provider value={value}>{children}</PetContext.Provider>;

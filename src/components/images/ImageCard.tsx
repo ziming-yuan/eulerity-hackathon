@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Pet } from "../types/pet";
-import { usePets } from "../hooks/PetContext";
+import { Pet } from "../../types/pet";
+import { usePets } from "../../hooks/PetContext";
 
 interface ImageCardProps {
   pet: Pet;

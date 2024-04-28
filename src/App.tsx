@@ -1,8 +1,8 @@
 import React from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { PetProvider } from "./hooks/PetContext";
-import TopBar from "./components/TopBar";
-import ImageGrid from "./components/ImageGrid";
+import TopBar from "./components/controls/TopBar";
+import ImageGrid from "./components/images/ImageGrid";
 
 const GlobalStyles = createGlobalStyle`
   button, input, select {
@@ -15,13 +15,22 @@ const GlobalStyles = createGlobalStyle`
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     &:active, &:focus {
-      outline-style: solid;
+      outline-style: auto;
       outline-color: ${(props) => props.theme.colors.primary};
       outline-width: 2px;
     }
     /* Small screens */
     @media (max-width: 576px) {
       font-size: 14px;
+    }
+  }
+  svg {
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    @media (max-width: 576px) {
+      width: 14px;
+      height: 14px;
     }
   }
 `;

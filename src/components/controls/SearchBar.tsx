@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { ReactComponent as SearchIcon } from "../icons/search.svg";
-import { usePets } from "../hooks/PetContext";
+import { ReactComponent as SearchIcon } from "../../icons/search.svg";
+import { usePets } from "../../hooks/PetContext";
 
 const SearchContainer = styled.div`
   position: relative;
@@ -17,13 +17,9 @@ const StyledInput = styled.input`
 
 const IconWrapper = styled.div`
   position: absolute;
-  left: 10px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  svg {
-    height: 15px;
-    width: 15px;
-  }
 `;
 
 const SearchBar = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { usePets } from "../hooks/PetContext";
+import { usePets } from "../../hooks/PetContext";
 import ImageCard from "./ImageCard";
 import styled from "styled-components";
 
