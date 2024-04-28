@@ -5,10 +5,12 @@ import styled from "styled-components";
 
 const StyledImageGrid = styled.div`
   display: grid;
-  margin: 20px 40px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: center;
-  gap: 20px;
+  gap: 30px 20px;
+  width: calc(100% - 80px);
+  max-width: 1350px;
+  margin: 20px auto;
   &::after {
     content: "";
     width: 300px;
