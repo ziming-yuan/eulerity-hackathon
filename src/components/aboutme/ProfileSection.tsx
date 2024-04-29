@@ -62,10 +62,18 @@ const ProfileSection = () => {
       <ProfileDetails>
         <Title>
           Ziming Yuan{" "}
-          <a href="https://www.linkedin.com/in/ziming-yuan">
+          <a
+            href="https://www.linkedin.com/in/ziming-yuan"
+            target="_blank"
+            rel="noreferrer"
+          >
             <LinkedInIcon />
           </a>
-          <a href="https://www.github.com/ziming-yuan">
+          <a
+            href="https://www.github.com/ziming-yuan"
+            target="_blank"
+            rel="noreferrer"
+          >
             <GithubIcon />
           </a>
           <Link to={`${process.env.PUBLIC_URL}/resume.pdf`} target="_blank">
