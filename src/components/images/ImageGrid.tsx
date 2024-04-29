@@ -25,8 +25,10 @@ const StyledImageGrid = styled.div`
 `;
 
 const StyledParagraph = styled.p`
-  padding: 40px;
-  font-size: 20px;
+  padding: 0;
+  font-size: 16px;
+  margin: 40px;
+  margin-bottom: 60px;
 `;
 const ImageGrid = () => {
   const { pets, loading, error } = usePets();
@@ -35,6 +37,11 @@ const ImageGrid = () => {
   if (error)
     return (
       <StyledParagraph>Error loading images: {String(error)}</StyledParagraph>
+    );
+
+  if (pets.length === 0)
+    return (
+      <StyledParagraph>No pets found. Try another search term.</StyledParagraph>
     );
 
   return (

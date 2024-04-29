@@ -19,6 +19,10 @@ const GlobalStyles = createGlobalStyle`
       outline-color: ${(props) => props.theme.colors.primary};
       outline-width: 2px;
     }
+    &:disabled {
+      color: ${(props) => props.theme.colors.secondary};
+      cursor: not-allowed;
+    }
     /* Small screens */
     @media (max-width: 576px) {
       font-size: 14px;

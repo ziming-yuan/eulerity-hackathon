@@ -15,7 +15,13 @@ const Button = styled.button`
 `;
 
 const SelectionControls = () => {
-  const { selectAll, clearSelection, downloadSelected, sortPets } = usePets();
+  const {
+    selectedPets,
+    selectAll,
+    clearSelection,
+    downloadSelected,
+    sortPets,
+  } = usePets();
 
   return (
     <ControlContainer>
@@ -27,7 +33,9 @@ const SelectionControls = () => {
       </Button>
       <Button onClick={selectAll}>Select All</Button>
       <Button onClick={clearSelection}>Clear Selection</Button>
-      <Button onClick={downloadSelected}>Download </Button>
+      <Button onClick={downloadSelected} disabled={selectedPets.size === 0}>
+        Download
+      </Button>
     </ControlContainer>
   );
 };

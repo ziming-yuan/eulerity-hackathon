@@ -68,7 +68,7 @@ export const PetProvider = ({ children }: { children: React.ReactNode }) => {
       });
       setFilteredPets(filtered);
     }
-  }, [search]);
+  }, [search, pets]);
 
   const toggleSelection = (id: string) => {
     setSelectedPets((prevSelectedPets) => {
