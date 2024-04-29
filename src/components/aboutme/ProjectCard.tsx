@@ -1,12 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-
-interface ProjectType {
-  title: string;
-  images: string[];
-  repo: string;
-  techstack: string;
-}
+import { ProjectType } from "../../types/project";
 
 const ProjectCardStyled = styled.div`
   position: relative;
@@ -63,10 +57,26 @@ const ProjectTitleStyled = styled.h3`
   margin-bottom: 0;
 `;
 
-const DescriptionStyled = styled.p`
+const DescriptionStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+`;
+
+const ParagraphStyled = styled.p`
   font-size: 1rem;
-  padding: 10px;
-  margin: 0;
+  margin: 5px 10px;
+`;
+
+const LinkStyled = styled.a`
+  margin-top: 10px;
+  color: ${(props) => props.theme.colors.darker};
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
@@ -100,11 +110,32 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
       />
       <ProjectTitleStyled>{project.title}</ProjectTitleStyled>
       <DescriptionStyled>
-        <strong>Tech stack:</strong> {project.techstack}
+        <ParagraphStyled>
+          <strong>Description</strong>
+        </ParagraphStyled>
+        <ParagraphStyled>{project.description}</ParagraphStyled>
+        <ParagraphStyled>
+          <strong>Tech stack</strong>
+        </ParagraphStyled>
+        <ParagraphStyled>{project.techstack}</ParagraphStyled>
       </DescriptionStyled>
-      <a href={project.repo} target="_blank">
-        View on GitHub
-      </a>
+      {project.github ? (
+        <LinkStyled
+          href={project.repo}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on GitHub
+        </LinkStyled>
+      ) : (
+        <LinkStyled
+          href={project.repo}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View the website
+        </LinkStyled>
+      )}
     </ProjectCardStyled>
   );
 };

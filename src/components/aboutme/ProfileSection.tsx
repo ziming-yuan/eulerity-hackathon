@@ -73,15 +73,20 @@ const ProfileSection = () => {
           </Link>
         </Title>
         <Description>
-          I am a full-stack web developer with a passion for building
-          user-friendly websites. I have experience working with React, Next.js,
-          and other web frameworks including Spring Boot and Flask. I am always
-          eager to learn new things and improve my skills.
+          I am a full-stack web developer with a strong foundation in computer
+          science and mathematics, currently pursuing a double major at
+          Swarthmore College and preparing to further my education in computer
+          science at Carnegie Mellon University. I am proficient in a diverse
+          set of programming languages and frameworks including React, Next.js,
+          Spring Boot, and Flask, making me well-equipped to tackle complex
+          software challenges.
         </Description>
         <Description>
-          I will be graduating from Swarthmore College in May 2024 with a double
-          major in computer science and math. I will be joining Carnegie Mellon
-          University for its MSCS program this fall to further my skills.
+          Eager to bring my expertise in web technologies and my passion for
+          learning to Eulerity, I am excited about the opportunity to develop
+          new features and maintain a robust codebase, contributing to the
+          company's mission of empowering small businesses with cutting-edge
+          technology.
         </Description>
       </ProfileDetails>
     </ProfileSectionContainer>
