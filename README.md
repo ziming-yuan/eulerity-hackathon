@@ -1,46 +1,56 @@
-# eulerity-hackathon
+# Eulerity Web Hackathon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a full-stack web application built using React, TypeScript, and Styled Components. It has a pet gallery **home** page where users can search, sort, select, and download images as well as an **about me** page that displays my web projects. This README provides an overview of the code organization and instructions on how to set up and run the project locally.
 
-## Available Scripts
+## Code Organization
 
-In the project directory, you can run:
+Below is a brief overview of the project's directory structure and key components:
 
-### `npm start`
+- `src/`: Contains all the source files for the project.
+  - `App.tsx`: The root component that wraps all other components and sets up routes using react-router-dom.
+  - `index.tsx`: Entry point for the React application.
+  - `assets/`: Contains static assets such as background images.
+  - `components/`: Contains all React components structured grouped by functionality.
+    - `Footer.tsx`: Footer component.
+    - `Navigation.tsx`: Navigation bar component.
+    - `TitleSection.tsx`: Component for rendering the title section on the home page.
+    - `aboutme/`: Project and profile section components related to the aboutme page.
+    - `controls/`: Components of search, sort, select all, clear selection controls for the pet gallery.
+    - `images/`: Image display components for the pet gallery.
+    - `pages/`: Page components.
+  - `hooks/`: Contains `PetContext.tsx` for the pet gallery.
+  - `icons/`: SVG icons.
+  - `theme/`: Contains styling themes and global styles for styled components.
+  - `types/`: TypeScript types and interfaces.
+  - `utils/`: Utility function to handle the fetch API call.
+- `public/`: Contains favicon, and static files.
+- `README.md`: Documentation about the project (this file).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To get this project running on your local machine, follow these steps:
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js installed on your machine. If you do not have it installed, download it from [Node.js website](https://nodejs.org/).
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository to your local machine:
+   ```bash
+    git clone https://github.com/ziming-yuan/eulerity-hackathon.git
+    cd eulerity-hackathon
+   ```
+2. Install the packages:
+   ```bash
+   npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Viewing the Application
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Once the server is running, you can view the application by navigating to http://localhost:3000 in your web browser. The development server will reload if you make edits, and you will also see any lint errors in the console.
