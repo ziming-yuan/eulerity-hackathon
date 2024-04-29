@@ -1,11 +1,22 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Pet } from "../../types/pet";
 import { usePets } from "../../hooks/PetContext";
 
 interface ImageCardProps {
   pet: Pet;
 }
+
+const fadeIn = keyframes`
+  from {
+    scale: 0.8;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  };
+`;
 
 const Card = styled.div<{ $isSelected: boolean }>`
   width: 300px;
@@ -15,6 +26,10 @@ const Card = styled.div<{ $isSelected: boolean }>`
     $isSelected && `2px solid ${theme.colors.primary}`};
   border: "1px solid #d9d9d9";
   transition: transform 0.2s ease-out; /* When hovering over the card, scale it */
+  animation: ${fadeIn} ease-in;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 200px;
   &:hover {
     transform: scale(1.05);
   }

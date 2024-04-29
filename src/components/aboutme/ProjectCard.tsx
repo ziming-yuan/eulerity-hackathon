@@ -1,6 +1,17 @@
 import { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { ProjectType } from "../../types/project";
+
+const fadeIn = keyframes`
+  from {
+    scale: 0.9;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  };
+`;
 
 const ProjectCardStyled = styled.div`
   position: relative;
@@ -16,6 +27,10 @@ const ProjectCardStyled = styled.div`
   width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
+  animation: ${fadeIn} ease-in;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 300px;
   &:hover {
     transform: translateY(-5px);
   }
