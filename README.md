@@ -28,15 +28,15 @@ Below is a brief overview of the project's directory structure and key component
 
 ## Getting Started
 
-To get this project running on your local machine, follow these steps:
+To get this project running on the local machine, follow these steps:
 
 ### Prerequisites
 
-- Node.js installed on your machine. If you do not have it installed, download it from [Node.js website](https://nodejs.org/).
+- Node.js. If not installed yet, download it from [Node.js website](https://nodejs.org/).
 
 ### Installation
 
-1. Clone the repository to your local machine:
+1. Clone the repository to the local machine:
    ```bash
     git clone https://github.com/ziming-yuan/eulerity-hackathon.git
     cd eulerity-hackathon
@@ -53,4 +53,4 @@ To get this project running on your local machine, follow these steps:
 
 ### Viewing the Application
 
-Once the server is running, you can view the application by navigating to http://localhost:3000 in your web browser. The development server will reload if you make edits, and you will also see any lint errors in the console.
+Once the server is running, we can view the application by navigating to http://localhost:3000 in the web browser. The development server will reload if we make edits, and we will also see any lint errors in the console.
