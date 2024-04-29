@@ -24,6 +24,7 @@ Below is a brief overview of the project's directory structure and key component
   - `types/`: TypeScript types and interfaces.
   - `utils/`: Utility function to handle the fetch API call.
 - `public/`: Contains favicon, and static files.
+- `res/`: Contains snapshots of home and about me pages.
 - `README.md`: Documentation about the project (this file).
 
 ## Getting Started
@@ -42,10 +43,12 @@ To get this project running on the local machine, follow these steps:
     cd eulerity-hackathon
    ```
 2. Install the packages:
+
    ```bash
    npm install
 
    ```
+
 3. Start the development server:
    ```bash
    npm start

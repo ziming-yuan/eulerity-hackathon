@@ -81,20 +81,25 @@ const ProfileSection = () => {
           </Link>
         </Title>
         <Description>
-          I am a full-stack web developer with a strong foundation in computer
-          science and mathematics, currently pursuing a double major at
-          Swarthmore College and preparing to further my education in computer
-          science at Carnegie Mellon University. I am proficient in a diverse
-          set of programming languages and frameworks including React, Next.js,
-          Spring Boot, and Flask, making me well-equipped to tackle complex
-          software challenges.
+          I am a full-stack web developer nearing completion of a double major
+          in computer science and mathematics at Swarthmore College, with plans
+          to continue my studies at Carnegie Mellon University. My technical
+          proficiency spans React, Next.js, Spring Boot, and Flask. I love
+          crafting creative and effective solutions, focusing on user-friendly
+          and visually appealing interfaces.
         </Description>
         <Description>
-          Eager to bring my expertise in web technologies and my passion for
-          learning to Eulerity, I am excited about the opportunity to develop
-          new features and maintain a robust codebase, contributing to the
-          company's mission of empowering small businesses with cutting-edge
-          technology.
+          As a teaching assistant and research assistant at Swarthmore College,
+          I've deepened my expertise in algorithms, parallel computing, and
+          human-computer interaction. I'm also an active member of the
+          Swarthmore College Computer Society, enhancing our community's digital
+          infrastructure. These roles have sharpened my skills in teamwork and
+          user-centered design.
+        </Description>
+        <Description>
+          I am excited to apply my passion for software engineering at Eulerity,
+          where I look forward to developing innovative features and supporting
+          small businesses with advanced technology solutions.
         </Description>
       </ProfileDetails>
     </ProfileSectionContainer>

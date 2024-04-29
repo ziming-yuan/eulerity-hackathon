@@ -33,7 +33,14 @@ const Footer = () => {
     <StyledFooter>
       <p>© {new Date().getFullYear()} Pet Gallery. All rights reserved.</p>
       <p>
-        Designed by <a href="https://github.com/ziming-yuan">Ziming Yuan</a>
+        Designed by{" "}
+        <a
+          href="https://github.com/ziming-yuan"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Ziming Yuan
+        </a>
       </p>
     </StyledFooter>
   );
