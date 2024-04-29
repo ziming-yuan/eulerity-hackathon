@@ -10,6 +10,9 @@ const AboutContainer = styled.div`
   width: calc(100% - 80px);
   max-width: 1350px;
   margin: 20px auto;
+  @media (max-width: 576px) {
+    width: calc(100% - 40px);
+  }
 `;
 
 const AboutPage = () => {
