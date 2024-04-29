@@ -9,9 +9,8 @@ const ProfileSectionContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
   margin-top: 20px;
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -21,18 +20,16 @@ const ProfileImage = styled.img`
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin-right: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
   &:hover {
-    outline: ${(props) => props.theme.colors.primary} solid 2px;
-  }
-
-  @media (max-width: 768px) {
-    margin-bottom: 20px;
+    transform: translateY(-5px);
   }
 `;
 
 const ProfileDetails = styled.div`
   max-width: 60%;
+  padding: 30px;
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -46,8 +43,10 @@ const Title = styled.h1`
     width: 30px;
     height: 30px;
     margin-left: 5px;
+    transition: transform 0.2s ease-in-out;
     &:hover {
       opacity: 0.8;
+      transform: translateY(-3px);
     }
   }
 `;

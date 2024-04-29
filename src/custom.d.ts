@@ -13,6 +13,6 @@ declare module "*.jpg" {
 }
 
 declare module "*.png" {
-  const value: string;
+  const value: any;
   export default value;
 }

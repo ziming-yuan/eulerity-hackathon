@@ -7,7 +7,9 @@ const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px;
+  width: calc(100% - 80px);
+  max-width: 1350px;
+  margin: 20px auto;
 `;
 
 const AboutPage = () => {
