@@ -10,7 +10,7 @@ Below is a brief overview of the project's directory structure and key component
   - `App.tsx`: The root component that wraps all other components and sets up routes using react-router-dom.
   - `index.tsx`: Entry point for the React application.
   - `assets/`: Contains static assets such as background images.
-  - `components/`: Contains all React components structured grouped by functionality.
+  - `components/`: Contains all React components grouped by functionality.
     - `Footer.tsx`: Footer component.
     - `Navigation.tsx`: Navigation bar component.
     - `TitleSection.tsx`: Component for rendering the title section on the home page.
@@ -18,7 +18,7 @@ Below is a brief overview of the project's directory structure and key component
     - `controls/`: Components of search, sort, select all, clear selection controls for the pet gallery.
     - `images/`: Image display components for the pet gallery.
     - `pages/`: Page components.
-  - `hooks/`: Contains `PetContext.tsx` for the pet gallery.
+  - `hooks/`: Contains the context used for the pet gallery.
   - `icons/`: SVG icons.
   - `theme/`: Contains styling themes and global styles for styled components.
   - `types/`: TypeScript types and interfaces.
